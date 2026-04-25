@@ -46,8 +46,8 @@ RepoPrep Pro automatically identifies and excludes:
 python main.py
 Build for Windows (.exe)
 Requires pyinstaller. Use the included build script:
-
-Bash
+```
+```Bash
 build.bat
 📜 License & Credits
 Developer: Lidprex Labs
