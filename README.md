@@ -1,84 +1,62 @@
-# RepoPrep v1.1.0 - Professional Project Cleaner
+# 🚀 RepoPrep Pro v2.2.0
+**Professional Project Cleaner & AI Context Preparer** *Built with reputation by **Lidprex Labs***
 
-Clean and prepare your software projects for sharing, backup, or distribution.
+---
 
-## Features
+## 🌟 Overview
+**RepoPrep Pro v2.2.0** is the next generation of project management tools. While v1.1.0 focused on basic cleanup, this version is a high-performance engine designed for modern developers who work with **LLMs (AI)** and massive codebases (100,000+ files).
 
-✅ Smart Cleaning: Automatically removes unnecessary files and directories  
-✅ Project Detection: Recognizes Node.js, Python, Java, Go, Rust, and more  
-✅ Library Removal: Properly handles large package directories (node_modules, venv, etc.)  
-✅ Safe Operation: Never modifies the original project  
-✅ Detailed Logging: See exactly what's being processed  
-✅ Large Project Support: Handles projects with 100,000+ files  
-✅ Memory Optimized: Efficient processing without crashes  
+Moving away from PySide6, this version is built on a **Zero-Dependency** architecture using native Python `tkinter`, making it the most lightweight and portable version ever released by **Lidprex Labs**.
 
-## System Requirements
+---
 
-- Windows 10/11 (64-bit)
-- Python 3.10+ (if running from source)
-- 4 GB RAM minimum
-- 200 MB free disk space
+## 🆕 What's New in v2.2.0?
+* **🌍 Global Support:** Full localization for **English, Arabic, Russian, and Chinese**.
+* **🤖 AI Flatten Mode:** Specifically designed to prepare codebases for ChatGPT/Claude by removing folder depth.
+* **⚡ Zero-Dependency:** Runs out of the box with standard Python. No external libraries needed.
+* **📊 Live Stats:** Real-time scanning that shows project type and potential space savings.
+* **🎨 Modern UI:** A sleek, dark-themed interface with batch-optimized logging for speed.
 
-## Quick Start
+---
+
+## 🛠 Operation Modes
+
+| Mode | Function | Ideal For |
+| :--- | :--- | :--- |
+| **Flatten & Prepare for AI** | Copies all source files into a single flat folder. | Sending code to AI prompts. |
+| **Smart Clean** | Removes junk files while keeping your folder structure. | Clean backups & GitHub uploads. |
+| **Scan Only** | Analyzes files and shows stats without touching anything. | Pre-operation check. |
+
+---
+
+## 🧹 Automated Cleaning Logic
+RepoPrep Pro automatically identifies and excludes:
+* **Dependencies:** `node_modules`, `venv`, `.gradle`, `site-packages`.
+* **Builds:** `dist`, `build`, `target`, `bin`, `out`.
+* **Caches:** `__pycache__`, `.next`, `.nuxt`, `.pytest_cache`.
+* **Locks:** `package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`.
+* **System/Logs:** `.log`, `.tmp`, `.DS_Store`, `Thumbs.db`.
+
+---
+
+## 🚀 Quick Start
 
 ### Run from Source
 ```bash
-pip install -r requirements.txt
 python main.py
-```
+Build for Windows (.exe)
+Requires pyinstaller. Use the included build script:
 
-### Build Executable
-```bash
-pip install pyinstaller
-pyinstaller --onefile --windowed --name RepoPrep --icon=icon.ico main.py
-```
+Bash
+build.bat
+📜 License & Credits
+Developer: Lidprex Labs
 
-## Files Removed
+Version: 2.2.0 (Stable Release)
 
-- .git, .svn, .hg - Version control
-- node_modules, venv, .venv, env - Dependencies
-- __pycache__, .pytest_cache, .mypy_cache - Cache files
-- dist, build, target - Build artifacts
-- .idea, .vscode, .vs - IDE configuration
-- .DS_Store, Thumbs.db - System files
-- *.log, *.tmp - Temporary files
+License: MIT License — © 2026
 
-## License
+"Building products with reputation, not noise."
 
-MIT License © 2026 RyderDev
 
-text
-
-## 7. Creating a run.bat file for quick execution
-```batch
-@echo off
-chcp 65001 >nul
-echo ========================================
-echo    RepoPrep Pro v2.0 (2026)
-echo    Professional Project Cleaner
-echo ========================================
-echo.
-```
-REM Check Python
-python --version >nul 2>&1
-if errorlevel 1 (
-    echo [ERROR] Python not found!
-    echo Please install Python 3.10+ from python.org
-    pause
-    exit /b 1
-)
-
-REM Install requirements
-echo Installing requirements...
-pip install -r requirements.txt >nul 2>&1
-
-REM Run application
-echo Starting RepoPrep Pro...
-python main.py
-
-if errorlevel 1 (
-    echo.
-    echo [ERROR] Failed to start application
-    pause
-)
-
+---
